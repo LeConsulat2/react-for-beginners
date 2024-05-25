@@ -12,22 +12,26 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
       const root = document.getElementById("root");
-      let counter = 0;
-      function countUP() {
-        counter = counter + 1;
-        render();
-      }
-      function render() {
-        ReactDOM.render(<Container />, root);
-      }
-      const Container = () => (
-        <div>
-          <h3>Total clicks {counter}</h3>
-          <button onClick={countUP}>Click me</button>
-        </div>
-      );
-      ReactDOM.render(<Container />, root);
-      render();
+      const { useState } = React;
+
+      const App = () => {
+        // Initialize state for counter
+        const [counter, setCounter] = useState(0); //1st one is value and 2nd one is the data modifier
+
+        // Function to increment counter
+        const countUP = () => {
+          setCounter(counter + 1);
+        };
+
+        return (
+          <div>
+            <h3>Total clicks {counter}</h3>
+            <button onClick={countUP}>Click me</button>
+          </div>
+        );
+      };
+
+      ReactDOM.render(<App />, root);
     </script>
   </body>
 </html>
