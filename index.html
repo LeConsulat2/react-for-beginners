@@ -15,18 +15,21 @@
       const { useState } = React;
 
       const App = () => {
-        // Initialize state for counter
-        const [counter, setCounter] = useState(0); //1st one is value and 2nd one is the data modifier
-
-        // Function to increment counter
-        const countUP = () => {
-          setCounter(counter + 1);
-        };
+        const [minutes, setMinutes] = useState(0);
 
         return (
           <div>
-            <h3>Total clicks {counter}</h3>
-            <button onClick={countUP}>Click me</button>
+            <h1 className="h1">Super converter</h1>
+            <label htmlFor="minutes">Minutes</label>
+            <input
+              id="minutes"
+              placeholder="Minutes"
+              type="number"
+              value={minutes}
+              onChange={(e) => setMinutes(e.target.value)}
+            />
+            <label htmlFor="hours">Hours</label>
+            <input id="hours" placeholder="Hours" type="number" />
           </div>
         );
       };
