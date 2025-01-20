@@ -1,0 +1,38 @@
+# Dependency directories
+node_modules/
+
+# Production build directory
+build/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Log files
+npm-debug.log*
+
+# IDE and editor-specific files
+.vscode/
+.idea/
+
+# System files
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+coverage/
+
+# Generated files
+public/*.cache
+public/asset-manifest.json
+public/service-worker.js
+public/precache-manifest.*.js
+src/**/*.js.map
+src/**/*.d.ts
+
+toignore/
