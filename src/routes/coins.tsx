@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   max-width: 720px;
-  margin: 10px auto;
+  margin: 12px 700px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   padding: 0px 20px;
 `;
 
@@ -19,11 +19,11 @@ const Header = styled.header`
 `;
 
 const CoinsList = styled.ul`
-  padding: 0px 20px;
+  padding: 0px 40px;
 `;
 
 const Coin = styled.li`
-  background-color: white;
+  background-color: pink;
   color: ${(props) => props.theme.bgColor};
   border-radius: 15px;
   margin-bottom: 10px;
@@ -42,7 +42,7 @@ const Coin = styled.li`
 
 const Title = styled.h1`
   font-size: 50px;
-  color: ${(props) => props.theme.accentColor};
+  color: ${(props) => props.theme.textColor};
 `;
 
 const coins = [
